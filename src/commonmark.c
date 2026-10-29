@@ -6,7 +6,7 @@
 
 #include "config.h"
 #include "cmark-gfm.h"
-#include "node.h"
+#include "node.h" 
 #include "buffer.h"
 #include "utf8.h"
 #include "scanners.h"
@@ -211,7 +211,7 @@ static int S_render_node(cmark_renderer *renderer, cmark_node *node,
     if (!entering && node->next && (node->next->type == CMARK_NODE_CODE_BLOCK ||
                                     node->next->type == CMARK_NODE_LIST)) {
       // this ensures that a following indented code block or list will be
-      // inteprereted correctly.
+      // interpreted correctly.
       CR();
       LIT("<!-- end list -->");
       BLANKLINE();
